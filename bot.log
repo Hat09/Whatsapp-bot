@@ -1,0 +1,68 @@
+2025/11/14 16:55:35 [BOT] 🚀 [16:55:35] Starting WhatsApp Bot with Telegram Integration...
+2025/11/14 16:55:35 [BOT] ℹ️  Version: 1.0.0
+2025/11/14 16:55:35 [BOT] ℹ️  Initializing...
+2025/11/14 16:55:35 [BOT] 🚀 [16:55:35] Initializing Application...
+2025/11/14 16:55:35 [BOT] 🚀 [16:55:35] Loading configuration...
+2025/11/14 16:55:35 [BOT] ℹ️  Using existing database: whatsmeow-6069200226-639382163248.db (will be overridden by multi-account if available)
+2025/11/14 16:55:35 [BOT] ✅ Configuration loaded
+2025/11/14 16:55:35 [BOT] 🚀 [16:55:35] Initializing Telegram bot...
+2025/11/14 16:55:36 [BOT] ✅ Telegram bot initialized
+2025/11/14 16:55:36 [BOT] 🚀 [16:55:36] Initializing database...
+2025/11/14 16:55:36 [BOT] ✅ Database initialized
+2025/11/14 16:55:36 [BOT] 🚀 [16:55:36] Initializing WhatsApp client...
+✅ Loaded 1 accounts from database master
+2025/11/14 16:55:36 [BOT] ℹ️  Multi-account: Found 1 existing accounts, will use multi-account system for auto-login
+2025/11/14 16:55:36 [BOT] 🚀 [16:55:36] Finalizing setup...
+✅ Bot database siap
+2025/11/14 16:55:36 [BOT] ℹ️  Multi-account: Loaded 1 WhatsApp accounts from database
+2025/11/14 16:55:36 [BOT] 🚀 [16:55:36] Validating all accounts on startup...
+2025/11/14 16:55:36 [BOT] 🚀 [16:55:36] Cleaning up orphaned database files...
+[CLEANUP] Memulai scan untuk orphaned database files...
+2025/11/14 16:55:36 [BOT] ℹ️  CleanupOrphanedDBFiles: Memulai scan untuk orphaned database files...
+[CLEANUP] Ditemukan 1 accounts terdaftar di database master
+2025/11/14 16:55:36 [BOT] ℹ️  CleanupOrphanedDBFiles: Ditemukan 1 accounts terdaftar di database master
+[CLEANUP] 🔍 Registered bot_data file: bot_data-6069200226-639382163248.db (account: 639382163248)
+2025/11/14 16:55:36 [BOT] 🔍 CleanupOrphanedDBFiles: Registered bot_data file: bot_data-6069200226-639382163248.db
+[CLEANUP] 🔍 Registered whatsapp file: whatsmeow-6069200226-639382163248.db (account: 639382163248)
+2025/11/14 16:55:36 [BOT] 🔍 CleanupOrphanedDBFiles: Registered whatsapp file: whatsmeow-6069200226-639382163248.db
+[CLEANUP] Total 1 bot_data files dan 1 whatsapp files terdaftar (dari 1 account)
+2025/11/14 16:55:36 [BOT] ℹ️  CleanupOrphanedDBFiles: Total 1 bot_data files dan 1 whatsapp files terdaftar (dari 1 account)
+[CLEANUP] Ditemukan 1 bot_data files dan 1 whatsapp files di filesystem (exclude master DB)
+2025/11/14 16:55:36 [BOT] ℹ️  CleanupOrphanedDBFiles: Ditemukan 1 bot_data files dan 1 whatsapp files di filesystem (exclude master DB)
+[CLEANUP] 🔍 File terdaftar (skip): bot_data-6069200226-639382163248.db
+2025/11/14 16:55:36 [BOT] 🔍 CleanupOrphanedDBFiles: File terdaftar (skip): bot_data-6069200226-639382163248.db
+[CLEANUP] 🔍 File terdaftar (skip): whatsmeow-6069200226-639382163248.db
+2025/11/14 16:55:36 [BOT] 🔍 CleanupOrphanedDBFiles: File terdaftar (skip): whatsmeow-6069200226-639382163248.db
+[CLEANUP] ✅ Tidak ada orphaned database files ditemukan - semua file terdaftar dengan benar
+2025/11/14 16:55:36 [BOT] ℹ️  CleanupOrphanedDBFiles: ✅ Tidak ada orphaned database files ditemukan - semua file terdaftar dengan benar
+2025/11/14 16:55:36 [BOT] ℹ️  Multi-account: Tidak ada orphaned database files ditemukan
+2025/11/14 16:55:36 [BOT] ℹ️  Multi-account: Using account ID 3 (639382163248) as current
+2025/11/14 16:55:36 [BOT] ℹ️  Multi-account: Updated dbConfig for account 639382163248 with TelegramID=6069200226
+2025/11/14 16:55:36 [BOT] ℹ️  Multi-account: Closed database pools to use new account database
+2025/11/14 16:55:36 [BOT] ℹ️  Multi-account: dbConfig verified - DBPath: bot_data-6069200226-639382163248.db
+2025/11/14 16:55:37 [BOT] ℹ️  Multi-account: Updated status for account 3 (639382163248) to active
+2025/11/14 16:55:37 [BOT] ✅ Multi-account: Successfully loaded and connected account 639382163248
+2025/11/14 16:55:37 [BOT] ℹ️  Multi-account: Updated status for account 3 (639382163248) to active
+2025/11/14 16:55:37 [BOT] ℹ️  Multi-account: Started periodic account status sync (every 2 minutes)
+✅ Bot WhatsApp sudah terhubung!
+2025/11/14 16:55:38 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data-6069200226-639382163248.db
+2025/11/14 16:55:38 [BOT] ℹ️  GetBotDBPool: ✅ Database tables created/verified for path: bot_data-6069200226-639382163248.db
+2025/11/14 16:55:38 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data-6069200226-639382163248.db
+2025/11/14 16:55:38 [BOT] ℹ️  GetTimezoneForUser: Sukses fetch timezone untuk user 6069200226: Singapore, Singapore (Asia/Singapore)
+[GRUP] 2025/11/14 16:55:39 grup_logger.go:43: [INFO] 🚀 Periodic group refresh started (interval: 5m0s)
+[GRUP] 2025/11/14 16:55:40 grup_logger.go:43: [INFO] 🔄 Periodic refresh: 289 grup updated di database
+2025/11/14 16:55:40 [BOT] ✅ Setup finalized
+2025/11/14 16:55:40 [BOT] ✅ Application initialized successfully
+2025/11/14 16:55:40 [BOT] ℹ️  User session cleanup started
+2025/11/14 16:55:40 [BOT] ✅ Application started successfully
+2025/11/14 16:55:40 [BOT] ℹ️  Press Ctrl+C to stop...
+2025/11/14 16:55:40 [BOT] ✅ Telegram bot handler active
+2025/11/14 16:59:25 [BOT] 🚀 [16:59:25] Shutting down...
+2025/11/14 16:59:25 [BOT] 🚀 [16:59:25] Initiating graceful shutdown...
+👋 Menutup bot...
+2025/11/14 16:59:25 [BOT] ℹ️  Stopping Telegram bot updates...
+2025/11/14 16:59:25 [BOT] ✅ Telegram bot stopped
+2025/11/14 16:59:25 [BOT] ℹ️  Disconnecting WhatsApp client...
+2025/11/14 16:59:25 [BOT] ✅ WhatsApp client disconnected
+2025/11/14 16:59:25 [BOT] ✅ Shutdown completed
+2025/11/14 16:59:25 [BOT] ✅ Application stopped

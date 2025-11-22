@@ -1,0 +1,435 @@
+package utils
+
+import (
+	"database/sql"
+	"fmt"
+	"strings"
+	"sync"
+
+	_ "github.com/mattn/go-sqlite3"
+)
+
+// Database connection pools
+var (
+	botDBPool      *sql.DB
+	whatsappDBPool *sql.DB
+	dbPoolOnce     sync.Once
+	dbPoolMutex    sync.Mutex
+)
+
+// GetBotDBPool mendapatkan connection pool untuk bot_data.db (menggunakan nama dinamis)
+func GetBotDBPool() (*sql.DB, error) {
+	dbName := GetBotDataDBPath()
+
+	dbPoolOnce.Do(func() {
+		db, err := sql.Open("sqlite3", dbName+"?_journal_mode=WAL&_cache=shared")
+		if err != nil {
+			return
+		}
+		db.SetMaxOpenConns(10)
+		db.SetMaxIdleConns(5)
+		botDBPool = db
+	})
+
+	if botDBPool == nil {
+		return nil, fmt.Errorf("gagal membuat database pool")
+	}
+
+	return botDBPool, nil
+}
+
+// GetWhatsAppDBPool mendapatkan connection pool untuk whatsapp.db (menggunakan nama dinamis)
+func GetWhatsAppDBPool() (*sql.DB, error) {
+	if whatsappDBPool == nil {
+		dbPoolMutex.Lock()
+		defer dbPoolMutex.Unlock()
+
+		if whatsappDBPool == nil {
+			dbName := GetWhatsAppDBPath()
+			db, err := sql.Open("sqlite3", dbName+"?_foreign_keys=on&_journal_mode=WAL&_cache=shared")
+			if err != nil {
+				return nil, err
+			}
+			db.SetMaxOpenConns(10)
+			db.SetMaxIdleConns(5)
+			whatsappDBPool = db
+		}
+	}
+	return whatsappDBPool, nil
+}
+
+// ClearAppState membersihkan app_state untuk memperbaiki LTHash error
+func ClearAppState() error {
+	dbName := GetWhatsAppDBPath()
+	db, err := sql.Open("sqlite3", dbName)
+	if err != nil {
+		return err
+	}
+	defer db.Close()
+
+	// Hapus semua data dari tabel-tabel app_state yang bisa menyebabkan LTHash error
+	tables := []string{
+		"whatsmeow_app_state_mutation_macs",
+		"whatsmeow_app_state_sync_keys",
+		"whatsmeow_app_state_version",
+	}
+
+	for _, table := range tables {
+		_, err := db.Exec("DELETE FROM " + table)
+		if err != nil {
+			// Jika tabel tidak ada, lanjutkan ke tabel berikutnya
+			if strings.Contains(err.Error(), "no such table") {
+				continue
+			}
+			// Log error tapi jangan gagalkan (bisa jadi tabel sudah kosong)
+			fmt.Printf("⚠️ Warning saat clear %s: %v\n", table, err)
+		}
+	}
+
+	return nil
+}
+
+// SetupBotDB menyiapkan database untuk bot (menggunakan nama dinamis)
+func SetupBotDB() error {
+	dbName := GetBotDataDBPath()
+	db, err := sql.Open("sqlite3", dbName)
+	if err != nil {
+		return err
+	}
+	defer db.Close()
+
+	// Create messages table
+	_, err = db.Exec(`
+		CREATE TABLE IF NOT EXISTS messages (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			sender TEXT NOT NULL,
+			message TEXT,
+			timestamp TEXT,
+			created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+		)
+	`)
+	// Create groups table untuk menyimpan daftar grup
+	_, err = db.Exec(`
+		CREATE TABLE IF NOT EXISTS groups (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			group_jid TEXT UNIQUE NOT NULL,
+			group_name TEXT,
+			created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+			updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+		)
+	`)
+	return err
+}
+
+// SaveMessageToDB menyimpan pesan ke database
+func SaveMessageToDB(sender, message, timestamp string) {
+	if message == "" || message == "[Media/Unknown]" {
+		return
+	}
+
+	db, err := sql.Open("sqlite3", "bot_data.db")
+	if err != nil {
+		return
+	}
+	defer db.Close()
+
+	_, err = db.Exec(
+		"INSERT INTO messages (sender, message, timestamp) VALUES (?, ?, ?)",
+		sender, message, timestamp,
+	)
+
+	if err != nil {
+		fmt.Printf("❌ Gagal save ke database: %v\n", err)
+	}
+}
+
+// SaveGroupToDB menyimpan grup ke database (menggunakan connection pool)
+func SaveGroupToDB(groupJID, groupName string) error {
+	db, err := GetBotDBPool()
+	if err != nil {
+		return err
+	}
+
+	// Insert or update group
+	_, err = db.Exec(`
+		INSERT OR REPLACE INTO groups (group_jid, group_name, updated_at) 
+		VALUES (?, ?, CURRENT_TIMESTAMP)
+	`, groupJID, groupName)
+
+	return err
+}
+
+// BatchSaveGroupsToDB menyimpan multiple grup sekaligus (lebih efisien)
+func BatchSaveGroupsToDB(groups map[string]string) error {
+	db, err := GetBotDBPool()
+	if err != nil {
+		return err
+	}
+
+	tx, err := db.Begin()
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+
+	stmt, err := tx.Prepare(`
+		INSERT OR REPLACE INTO groups (group_jid, group_name, updated_at) 
+		VALUES (?, ?, CURRENT_TIMESTAMP)
+	`)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+
+	for jid, name := range groups {
+		if _, err := stmt.Exec(jid, name); err != nil {
+			return err
+		}
+	}
+
+	return tx.Commit()
+}
+
+// GetAllGroupsFromDB mengambil semua grup dari database (menggunakan connection pool)
+func GetAllGroupsFromDB() (map[string]string, error) {
+	groups := make(map[string]string)
+
+	db, err := GetBotDBPool()
+	if err != nil {
+		return nil, err
+	}
+
+	rows, err := db.Query("SELECT group_jid, group_name FROM groups ORDER BY group_name ASC")
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		var jid, name string
+		if err := rows.Scan(&jid, &name); err != nil {
+			continue
+		}
+		groups[jid] = name
+	}
+
+	return groups, nil
+}
+
+// OpenWhatsAppDB membuka koneksi ke database WhatsApp (menggunakan connection pool)
+func OpenWhatsAppDB() (*sql.DB, error) {
+	return GetWhatsAppDBPool()
+}
+package utils
+
+import (
+	"fmt"
+	"os"
+	"path/filepath"
+)
+
+// EnsureDatabaseWritable memastikan database bisa ditulis
+func EnsureDatabaseWritable(dbPath string) error {
+	// Cek apakah file exist
+	if _, err := os.Stat(dbPath); err == nil {
+		// File exist, cek apakah bisa ditulis
+		file, err := os.OpenFile(dbPath, os.O_RDWR, 0666)
+		if err != nil {
+			return fmt.Errorf("tidak bisa membuka database untuk write: %v", err)
+		}
+		file.Close()
+	} else if os.IsNotExist(err) {
+		// File tidak exist, pastikan directory bisa ditulis
+		dir := filepath.Dir(dbPath)
+		if dir == "" || dir == "." {
+			dir = "."
+		}
+		if err := os.MkdirAll(dir, 0755); err != nil {
+			return fmt.Errorf("tidak bisa membuat directory: %v", err)
+		}
+		// Test write dengan membuat file temp
+		testFile := filepath.Join(dir, ".write_test")
+		file, err := os.Create(testFile)
+		if err != nil {
+			return fmt.Errorf("directory tidak bisa ditulis: %v", err)
+		}
+		file.Close()
+		os.Remove(testFile)
+	} else {
+		return fmt.Errorf("error cek database: %v", err)
+	}
+
+	return nil
+}
+package utils
+
+import (
+	"fmt"
+	"os"
+	"path/filepath"
+	"regexp"
+	"strings"
+)
+
+// DBConfig menyimpan konfigurasi nama database
+type DBConfig struct {
+	TelegramID     int64
+	WhatsAppNumber string
+	WhatsAppDBName string
+	BotDataDBName  string
+}
+
+var dbConfig *DBConfig
+
+// GetDBConfig mendapatkan konfigurasi database
+func GetDBConfig() *DBConfig {
+	return dbConfig
+}
+
+// SetDBConfig mengatur konfigurasi database berdasarkan Telegram ID dan nomor WhatsApp
+func SetDBConfig(telegramID int64, whatsappNumber string) {
+	dbConfig = &DBConfig{
+		TelegramID:     telegramID,
+		WhatsAppNumber: whatsappNumber,
+		WhatsAppDBName: fmt.Sprintf("whatsmeow(%d)>(%s).db", telegramID, whatsappNumber),
+		BotDataDBName:  fmt.Sprintf("bot_data(%d)>(%s).db", telegramID, whatsappNumber),
+	}
+}
+
+// GetWhatsAppDBPath mendapatkan path database WhatsApp
+func GetWhatsAppDBPath() string {
+	if dbConfig != nil && dbConfig.WhatsAppDBName != "" {
+		return dbConfig.WhatsAppDBName
+	}
+	// Default fallback
+	return "whatsapp.db"
+}
+
+// GetBotDataDBPath mendapatkan path database bot
+func GetBotDataDBPath() string {
+	if dbConfig != nil && dbConfig.BotDataDBName != "" {
+		return dbConfig.BotDataDBName
+	}
+	// Default fallback
+	return "bot_data.db"
+}
+
+// RenameDatabaseFiles merename database files dari nama lama ke nama baru
+func RenameDatabaseFiles(oldWhatsAppDB, newWhatsAppDB, oldBotDataDB, newBotDataDB string) error {
+	// List file database yang perlu di-rename (termasuk -shm dan -wal)
+	filesToRename := []struct {
+		old string
+		new string
+	}{
+		{oldWhatsAppDB, newWhatsAppDB},
+		{oldWhatsAppDB + "-shm", newWhatsAppDB + "-shm"},
+		{oldWhatsAppDB + "-wal", newWhatsAppDB + "-wal"},
+		{oldBotDataDB, newBotDataDB},
+		{oldBotDataDB + "-shm", newBotDataDB + "-shm"},
+		{oldBotDataDB + "-wal", newBotDataDB + "-wal"},
+	}
+
+	for _, file := range filesToRename {
+		if _, err := os.Stat(file.old); err == nil {
+			// File exists, rename it
+			if err := os.Rename(file.old, file.new); err != nil {
+				return fmt.Errorf("gagal rename %s ke %s: %v", file.old, file.new, err)
+			}
+		}
+	}
+
+	return nil
+}
+
+// SanitizeFilename membersihkan karakter yang tidak valid untuk nama file
+func SanitizeFilename(filename string) string {
+	// Replace karakter yang tidak valid untuk nama file
+	invalidChars := []string{"/", "\\", ":", "*", "?", "\"", "<", ">", "|"}
+	sanitized := filename
+	for _, char := range invalidChars {
+		sanitized = strings.ReplaceAll(sanitized, char, "_")
+	}
+	return sanitized
+}
+
+// GenerateDBName menghasilkan nama database berdasarkan format yang diminta
+func GenerateDBName(telegramID int64, whatsappNumber string, dbType string) string {
+	// Format: whatsmeow(id telegram)>(nomor whatsapp)
+	// Bersihkan nomor WhatsApp dari karakter non-digit
+	cleanNumber := strings.ReplaceAll(whatsappNumber, "+", "")
+	cleanNumber = strings.ReplaceAll(cleanNumber, "-", "")
+	cleanNumber = strings.ReplaceAll(cleanNumber, " ", "")
+
+	baseName := fmt.Sprintf("whatsmeow(%d)>(%s)", telegramID, cleanNumber)
+
+	if dbType == "bot_data" {
+		return fmt.Sprintf("bot_data(%d)>(%s).db", telegramID, cleanNumber)
+	}
+
+	return baseName + ".db"
+}
+
+// FindExistingDatabases mencari database yang sudah ada dengan format baru
+func FindExistingDatabases() (string, string, error) {
+	// Pattern: whatsmeow(telegram_id)>(whatsapp_number).db
+	pattern := `^whatsmeow\((\d+)\)>\((\d+)\)\.db$`
+	regex, err := regexp.Compile(pattern)
+	if err != nil {
+		return "", "", err
+	}
+
+	files, err := filepath.Glob("whatsmeow(*)>(*).db")
+	if err != nil {
+		return "", "", err
+	}
+
+	if len(files) > 0 {
+		// Ambil file pertama yang match
+		dbFile := files[0]
+		matches := regex.FindStringSubmatch(dbFile)
+		if len(matches) == 3 {
+			telegramID := matches[1]
+			whatsappNumber := matches[2]
+
+			whatsappDB := dbFile
+			botDataDB := fmt.Sprintf("bot_data(%s)>(%s).db", telegramID, whatsappNumber)
+
+			// Cek apakah bot_data.db juga ada
+			if _, err := os.Stat(botDataDB); os.IsNotExist(err) {
+				// Coba cari bot_data dengan pattern yang sama
+				botFiles, _ := filepath.Glob(fmt.Sprintf("bot_data(%s)>(%s).db", telegramID, whatsappNumber))
+				if len(botFiles) > 0 {
+					botDataDB = botFiles[0]
+				} else {
+					botDataDB = fmt.Sprintf("bot_data(%s)>(%s).db", telegramID, whatsappNumber)
+				}
+			}
+
+			return whatsappDB, botDataDB, nil
+		}
+	}
+
+	return "", "", fmt.Errorf("database tidak ditemukan")
+}
+
+// LoadDBConfigFromFile mencoba load konfigurasi database dari file yang ada
+func LoadDBConfigFromFile() bool {
+	whatsappDB, _, err := FindExistingDatabases()
+	if err == nil {
+		// Parse Telegram ID dan WhatsApp number dari nama file
+		pattern := `whatsmeow\((\d+)\)>\((\d+)\)\.db$`
+		regex, err := regexp.Compile(pattern)
+		if err == nil {
+			matches := regex.FindStringSubmatch(whatsappDB)
+			if len(matches) == 3 {
+				var telegramID int64
+				fmt.Sscanf(matches[1], "%d", &telegramID)
+				whatsappNumber := matches[2]
+
+				SetDBConfig(telegramID, whatsappNumber)
+				return true
+			}
+		}
+	}
+	return false
+}

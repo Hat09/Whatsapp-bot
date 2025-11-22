@@ -1,0 +1,186 @@
+2025/11/02 15:55:07 [BOT] 🚀 [15:55:07] Starting WhatsApp Bot with Telegram Integration...
+2025/11/02 15:55:07 [BOT] ℹ️  Version: 1.0.0
+2025/11/02 15:55:07 [BOT] ℹ️  Initializing...
+2025/11/02 15:55:07 [BOT] 🚀 [15:55:07] Initializing Application...
+2025/11/02 15:55:07 [BOT] 🚀 [15:55:07] Loading configuration...
+2025/11/02 15:55:07 [BOT] ℹ️  Using existing database: whatsmeow(6069200226)>(6283879996541).db (will be overridden by multi-account if available)
+2025/11/02 15:55:07 [BOT] ✅ Configuration loaded
+2025/11/02 15:55:07 [BOT] 🚀 [15:55:07] Initializing Telegram bot...
+2025/11/02 15:55:08 [BOT] ✅ Telegram bot initialized
+2025/11/02 15:55:08 [BOT] 🚀 [15:55:08] Initializing database...
+2025/11/02 15:55:08 [BOT] ✅ Database initialized
+2025/11/02 15:55:08 [BOT] 🚀 [15:55:08] Initializing WhatsApp client...
+2025/11/02 15:55:08 [BOT] ℹ️  Connecting to WhatsApp...
+2025/11/02 15:55:09 [BOT] 🔍 WhatsApp client connected
+2025/11/02 15:55:10 [BOT] ✅ WhatsApp client connected
+2025/11/02 15:55:10 [BOT] 🚀 [15:55:10] Finalizing setup...
+✅ Bot database siap
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:55:10 [BOT] ℹ️  Multi-account: Loaded 2 WhatsApp accounts from database
+2025/11/02 15:55:10 [BOT] ℹ️  Multi-account: Using account ID 1 (62895351513593) as current
+2025/11/02 15:55:10 [BOT] ⚠️  Multi-account: dbConfig mismatch! Expected: bot_data_account_62895351513593.db, Got: bot_data(6069200226)>(6283879996541).db. Phone: 62895351513593
+2025/11/02 15:55:12 [BOT] ✅ Multi-account: Successfully loaded and connected account 62895351513593
+✅ Bot WhatsApp sudah terhubung!
+2025/11/02 15:55:13 [BOT] ✅ Setup finalized
+2025/11/02 15:55:13 [BOT] ✅ Application initialized successfully
+2025/11/02 15:55:13 [BOT] ✅ Application started successfully
+2025/11/02 15:55:13 [BOT] ℹ️  Press Ctrl+C to stop...
+2025/11/02 15:55:13 [BOT] ✅ Telegram bot handler active
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=multi_account_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_switch
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_switch
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=multi_account_switch
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:55:18 [BOT] ℹ️  ShowAccountListEdit: Restored currentID to 1 after LoadAccounts
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_switch_2
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_switch_2
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=multi_account_switch_2
+15:55:22.617[31m [Client/Socket ERROR] Error reading from websocket: failed to get reader: failed to read frame header: EOF[0m
+2025/11/02 15:55:23 [BOT] ℹ️  SwitchAccount: Updated dbConfig - TelegramID=6069200226, Phone=6283879996541, ExpectedDBPath=bot_data(6069200226)>(6283879996541).db, AccountDBPath=bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:23 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:23 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:23 [BOT] ℹ️  SwitchAccount: Database pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:23 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:23 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:23 [BOT] ℹ️  Account switch callback: Database pool rebuilt with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:23 [BOT] ℹ️  Account switched: ID=2, Phone=6283879996541, TelegramID=6069200226, DBPath=bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:55:24 [BOT] ℹ️  ShowAccountListEdit: Restored currentID to 2 after LoadAccounts
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=multi_account_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_switch
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_switch
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=multi_account_switch
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:55:32 [BOT] ℹ️  ShowAccountListEdit: Restored currentID to 2 after LoadAccounts
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=multi_account_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=grup
+[DEBUG] Access granted, calling HandleCallbackQuery with data=grup
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=grup
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=list_grup
+[DEBUG] Access granted, calling HandleCallbackQuery with data=list_grup
+[DEBUG] Callback received: chatID=6069200226, messageID=4181, data=list_grup
+[GRUP] 2025/11/02 15:55:45 grup_logger.go:37: [DEBUG] Mulai fetchAllGroups
+[GRUP] 2025/11/02 15:55:45 grup_logger.go:43: [INFO] Mencoba mengambil grup menggunakan GetJoinedGroups() dari whatsmeow
+[GRUP] 2025/11/02 15:55:46 grup_logger.go:43: [INFO] Berhasil mengambil 291 grup dari GetJoinedGroups()
+2025/11/02 15:55:46 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:55:46 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+[GRUP] 2025/11/02 15:55:46 grup_logger.go:43: [INFO] Berhasil batch save 291 grup ke database
+[GRUP] 2025/11/02 15:55:46 grup_logger.go:43: [INFO] Total 291 grup berhasil diambil dari GetJoinedGroups()
+[GRUP] 2025/11/02 15:55:47 grup_logger.go:43: [INFO] Total grup diambil: 291
+[GRUP] 2025/11/02 15:55:47 grup_logger.go:37: [DEBUG] Filter: 291 grup masuk, 291 grup valid setelah filter
+[GRUP] 2025/11/02 15:55:47 grup_logger.go:43: [INFO] Total grup diambil: 291, Grup dengan nama valid: 291
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4187, data=multi_account_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_switch
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_switch
+[DEBUG] Callback received: chatID=6069200226, messageID=4187, data=multi_account_switch
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:58:14 [BOT] ℹ️  ShowAccountListEdit: Restored currentID to 2 after LoadAccounts
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_switch_1
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_switch_1
+[DEBUG] Callback received: chatID=6069200226, messageID=4187, data=multi_account_switch_1
+2025/11/02 15:58:16 [BOT] ℹ️  SwitchAccount: Updated dbConfig - TelegramID=6069200226, Phone=62895351513593, ExpectedDBPath=bot_data(6069200226)>(62895351513593).db, AccountDBPath=bot_data_account_62895351513593.db
+2025/11/02 15:58:16 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(62895351513593).db
+2025/11/02 15:58:16 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(62895351513593).db
+2025/11/02 15:58:16 [BOT] ℹ️  SwitchAccount: Database pool rebuilt successfully with path: bot_data(6069200226)>(62895351513593).db
+2025/11/02 15:58:16 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(62895351513593).db
+2025/11/02 15:58:16 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(62895351513593).db
+2025/11/02 15:58:16 [BOT] ℹ️  Account switch callback: Database pool rebuilt with path: bot_data(6069200226)>(62895351513593).db
+2025/11/02 15:58:16 [BOT] ℹ️  Account switched: ID=1, Phone=62895351513593, TelegramID=6069200226, DBPath=bot_data_account_62895351513593.db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:58:18 [BOT] ℹ️  ShowAccountListEdit: Restored currentID to 1 after LoadAccounts
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4187, data=multi_account_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4187, data=menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=grup
+[DEBUG] Access granted, calling HandleCallbackQuery with data=grup
+[DEBUG] Callback received: chatID=6069200226, messageID=4187, data=grup
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=list_grup
+[DEBUG] Access granted, calling HandleCallbackQuery with data=list_grup
+[DEBUG] Callback received: chatID=6069200226, messageID=4187, data=list_grup
+[GRUP] 2025/11/02 15:58:26 grup_logger.go:37: [DEBUG] Mulai fetchAllGroups
+[GRUP] 2025/11/02 15:58:26 grup_logger.go:43: [INFO] Mencoba mengambil grup menggunakan GetJoinedGroups() dari whatsmeow
+[GRUP] 2025/11/02 15:58:28 grup_logger.go:43: [INFO] Berhasil mengambil 953 grup dari GetJoinedGroups()
+2025/11/02 15:58:28 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(62895351513593).db
+2025/11/02 15:58:28 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(62895351513593).db
+[GRUP] 2025/11/02 15:58:28 grup_logger.go:43: [INFO] Berhasil batch save 953 grup ke database
+[GRUP] 2025/11/02 15:58:28 grup_logger.go:43: [INFO] Total 953 grup berhasil diambil dari GetJoinedGroups()
+[GRUP] 2025/11/02 15:58:28 grup_logger.go:43: [INFO] Total grup diambil: 953
+[GRUP] 2025/11/02 15:58:28 grup_logger.go:37: [DEBUG] Filter: 953 grup masuk, 953 grup valid setelah filter
+[GRUP] 2025/11/02 15:58:28 grup_logger.go:43: [INFO] Total grup diambil: 953, Grup dengan nama valid: 953
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=multi_account_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_switch
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_switch
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=multi_account_switch
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:58:43 [BOT] ℹ️  ShowAccountListEdit: Restored currentID to 1 after LoadAccounts
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_switch_2
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_switch_2
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=multi_account_switch_2
+2025/11/02 15:58:45 [BOT] ℹ️  SwitchAccount: Updated dbConfig - TelegramID=6069200226, Phone=6283879996541, ExpectedDBPath=bot_data(6069200226)>(6283879996541).db, AccountDBPath=bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:58:45 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:58:45 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:58:45 [BOT] ℹ️  SwitchAccount: Database pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:58:45 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:58:45 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:58:45 [BOT] ℹ️  Account switch callback: Database pool rebuilt with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:58:45 [BOT] ℹ️  Account switched: ID=2, Phone=6283879996541, TelegramID=6069200226, DBPath=bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+🔍 Found whatsapp_accounts table in: bot_data(6069200226)>(6283879996541).db
+✅ Loaded 2 accounts from database master
+2025/11/02 15:58:47 [BOT] ℹ️  ShowAccountListEdit: Restored currentID to 2 after LoadAccounts
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=multi_account_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=multi_account_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=multi_account_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=grup
+[DEBUG] Access granted, calling HandleCallbackQuery with data=grup
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=grup
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=get_link_menu
+[DEBUG] Access granted, calling HandleCallbackQuery with data=get_link_menu
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=get_link_menu
+[DEBUG] CallbackQuery received from userID=6069200226, allowedID=6069200226, data=start_get_link
+[DEBUG] Access granted, calling HandleCallbackQuery with data=start_get_link
+[DEBUG] Callback received: chatID=6069200226, messageID=4201, data=start_get_link
+2025/11/02 15:59:12 [BOT] ℹ️  GetBotDBPool: Creating new pool with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 15:59:12 [BOT] ℹ️  GetBotDBPool: Pool rebuilt successfully with path: bot_data(6069200226)>(6283879996541).db
+2025/11/02 16:45:48 [BOT] 🚀 [16:45:48] Shutting down...
+2025/11/02 16:45:48 [BOT] 🚀 [16:45:48] Initiating graceful shutdown...
+👋 Menutup bot...
+2025/11/02 16:45:49 [BOT] ℹ️  Stopping Telegram bot updates...
+2025/11/02 16:45:49 [BOT] ✅ Telegram bot stopped
+2025/11/02 16:45:49 [BOT] ℹ️  Disconnecting WhatsApp client...
+2025/11/02 16:45:49 [BOT] ✅ WhatsApp client disconnected
+2025/11/02 16:45:49 [BOT] ✅ Shutdown completed
+2025/11/02 16:45:49 [BOT] ✅ Application stopped

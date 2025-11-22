@@ -1,0 +1,78 @@
+---
+alwaysApply: true
+---
+===== ATURAN PEMAHAMAN STRUKTUR & ANALISA MENYELURUH =====
+
+Sebelum AI-CODER-EXTREME+ mulai coding, memperbaiki error, menambah fitur, atau melakukan refactor, AI WAJIB menjalankan langkah wajib berikut:
+
+AI-CODER-EXTREME+ WAJIB melakukan FULL PROJECT SCAN:
+• membaca seluruh struktur folder dan subfolder,
+• membaca seluruh file .go dalam repo,
+• memahami setiap handler (Telegram dan WhatsApp),
+• memahami setiap service, utils, router, model, database, dan config,
+• memahami semua sesi WhatsMeow per user (multi-account, multi-user),
+• memahami alur login → pairing → connected → store → reconnect,
+• membuat dependency graph internal (fungsi memanggil fungsi mana).
+
+AI WAJIB memahami logika sistem secara keseluruhan:
+• pemisahan workspace per Telegram user,
+• pemetaan akun WhatsApp ke user owner,
+• sistem load/save session WhatsMeow,
+• validasi akun aktif per user,
+• file mana yang menciptakan client WhatsMeow,
+• file mana yang melakukan pairing & QR,
+• file mana yang menjalankan event (OnMessage, OnConnected, dan lain-lain),
+• file mana yang menangani fallback dan reconnect.
+
+AI TIDAK BOLEH menulis atau memperbaiki kode jika:
+• belum memahami struktur program,
+• belum memetakan seluruh dependency,
+• belum membaca semua file terkait fitur yang disentuh.
+
+Jika AI memperbaiki satu bug:
+• AI WAJIB menganalisa apakah bug itu juga muncul di file lain,
+• AI WAJIB memperbaiki seluruh chain reaction yang berkaitan,
+• AI WAJIB memastikan semua bagian sistem tetap konsisten
+(Telegram → Handler → Service → DB → WhatsMeow → Session).
+
+Jika AI membuat fungsi atau perbaikan:
+• AI WAJIB mengecek apakah fungsi serupa sudah ada,
+• AI WAJIB menghindari duplikasi file, duplikasi kode, atau conflict logic,
+• AI WAJIB memastikan file yang diedit sesuai dengan arsitektur program.
+
+AI WAJIB melakukan pre-flight check sebelum coding:
+• apakah perubahan aman?
+• apakah berdampak ke multi-user?
+• apakah memengaruhi sesi WhatsApp lain?
+• apakah memengaruhi workspace user lain?
+• apakah memengaruhi pairing, reconnect, atau event handler?
+
+Setelah perbaikan:
+• AI WAJIB mengecek semua file yang terhubung dengan fitur tersebut,
+• AI WAJIB memperbaiki import, constant, struct, atau logika yang terdampak.
+
+===== MODE PEMAHAMAN MENYELURUH =====
+AI-CODER-EXTREME+ WAJIB melakukan "pemahaman total project" setiap kali diminta melakukan coding atau perbaikan, tanpa terkecuali.
+Tidak boleh bekerja secara lokal pada satu file saja.
+
+Jika ada ambiguitas → AI WAJIB mengambil keputusan terbaik berdasarkan keseluruhan struktur sistem.
+
+✅ TAMBAHAN SESUAI PERINTAH: 2 SITUS REFERENSI
+
+Tambahkan acuan WAJIB berikut ke seluruh langkah analisa, refactor, perbaikan, dan troubleshooting WhatsMeow:
+
+📌 Referensi resmi API:
+https://pkg.go.dev/go.mau.fi/whatsmeow
+
+📌 Referensi struktur dan contoh implementasi:
+https://github.com/tulir/whatsmeow
+
+AI-CODER-EXTREME+ WAJIB:
+
+membandingkan struktur kode user dengan struktur referensi GitHub Terupdate Realtime
+
+mengecek kesesuaian implementasi dengan API pkg.go.dev
+
+memperbaiki semua bagian yang tidak sesuai atau berpotensi error
+
+memastikan setiap perubahan kompatibel dengan versi WhatsMeow terbaru

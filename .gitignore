@@ -1,0 +1,35 @@
+# Binaries
+tmp/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+main
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# Air
+.air.toml
+build-errors.log
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+whatsapp.db
+bot_data.db
+
+# Config
+akses.json
+

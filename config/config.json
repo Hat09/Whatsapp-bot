@@ -1,0 +1,11 @@
+{
+  "telegram_token": "7599999487:AAGuEuNTUTEsLXDibPMepJ8JxKwt-bHExhg",
+  "admin_ids": [6069200226],
+  "allowed_user_ids": [6069200226, 379525054, 6853878411, 7793345217],
+  "settings": {
+    "max_accounts": 50,
+    "timeout_seconds": 30,
+    "retry_attempts": 3,
+    "log_level": "INFO"
+  }
+}
