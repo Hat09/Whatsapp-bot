@@ -1,0 +1,1742 @@
+{
+  "version": "3.0.0",
+  "schemaVersion": "2025.1",
+  "lastUpdated": "2025-11-22",
+
+  "metadata": {
+    "configName": "UltraIntelligent AI Agent System",
+    "purpose": "Advanced autonomous development agent with deep reasoning, predictive intelligence, and self-healing capabilities",
+    "targetDomains": ["whatsapp-automation", "bot-development", "enterprise-automation", "multi-platform"],
+    "aiCapabilities": ["deep-reasoning", "predictive-coding", "autonomous-refactoring", "context-synthesis"]
+  },
+
+  "clients": {
+    "cursor": {
+      "base_path": "${workspaceRoot}",
+      "memory_mode": "ultra_deep",
+      "reasoning_level": "quantum",
+      "goal_alignment": true,
+      "adaptiveLearning": true,
+      "syntheticAPI": true,
+      "creativeLogicMode": "unlimited",
+      "inferMissingFeatures": true,
+
+      "autoAudit": true,
+      "autoRepair": true,
+      "workflowUnderstanding": true,
+      "deepLogicUnderstanding": true,
+      "predictionEngine": true,
+      "quantumPrediction": true,
+      "multiDimensionalReasoning": true,
+
+      "autoDevMode": true,
+      "autoDevAnalysis": true,
+      "autoDevImprove": true,
+      "autoDevSync": true,
+      "autoDevEvolution": true,
+      "autoDevOptimizer": true,
+
+      "riskAwareMode": true,
+      "preventBreakingChanges": true,
+      "safeRefactor": true,
+      "runtimeConsistencyCheck": true,
+      "architectureConsistencyCheck": true,
+      "semanticConsistencyCheck": true,
+      "businessLogicValidation": true,
+      
+      "contextWindow": {
+        "enabled": true,
+        "size": "unlimited",
+        "smartCompression": true,
+        "priorityRetention": true,
+        "semanticChunking": true
+      }
+    }
+  },
+
+  "ProgramCreationGuide": {
+    "enabled": true,
+    "version": "3.0",
+    "purpose": "Memberikan AI Agent panduan ultra-lengkap untuk membuat program world-class dengan standar enterprise, security-first, dan maintainability tinggi",
+
+    "core_philosophy": [
+      "Think First, Code Later - Pahami masalah 100% sebelum menulis 1 baris kode",
+      "Security is Not Optional - Keamanan menyatu di setiap layer, bukan addon",
+      "Architecture Before Implementation - Desain yang solid mengalahkan coding cepat",
+      "Test-Driven Excellence - Testing bukan fase terakhir, tapi bagian dari development",
+      "Documentation as Code - Dokumentasi hidup bersama kode, bukan terpisah",
+      "Predictive Development - Antisipasi masalah sebelum terjadi",
+      "Self-Healing Systems - Program yang bisa detect dan fix masalahnya sendiri",
+      "Continuous Evolution - Program berkembang adaptif terhadap kebutuhan"
+    ],
+
+    "core_points": [
+      "Selalu memahami masalah pengguna terlebih dahulu dengan deep interview.",
+      "Requirement harus detail, terukur, dan verifiable sebelum coding.",
+      "Arsitektur, flow, dan dependency harus 100% jelas dan terdokumentasi.",
+      "Struktur folder harus scalable, modular, dan future-proof.",
+      "Keamanan harus built-in di setiap layer, bukan afterthought.",
+      "Jangan mulai implementasi tanpa desain lengkap dan validated.",
+      "Gunakan dokumentasi living dan testing sejak fase requirement.",
+      "Iterasi: plan → design → build → test → audit → optimize → deploy → monitor.",
+      "Predictive thinking: antisipasi edge case dan failure sebelum terjadi.",
+      "Build for change: arsitektur harus mudah di-extend tanpa rewrite."
+    ],
+
+    "steps": {
+      "0_discovery_phase": {
+        "enabled": true,
+        "tasks": [
+          "Deep interview dengan stakeholder untuk menggali kebutuhan tersembunyi.",
+          "Analisis kompetitor dan best practices di domain yang sama.",
+          "Identifikasi pain points dan opportunity areas.",
+          "Market research untuk validasi ide.",
+          "Feasibility study: technical, financial, operational.",
+          "Risk assessment awal dan mitigation strategy.",
+          "Define success metrics dan KPIs yang terukur.",
+          "Stakeholder mapping dan communication plan."
+        ],
+        "outputs": [
+          "Discovery Report",
+          "Stakeholder Matrix",
+          "Feasibility Analysis",
+          "Initial Risk Register"
+        ]
+      },
+
+      "1_requirement_analysis": {
+        "enabled": true,
+        "level": "enterprise",
+        "tasks": [
+          "Definisikan tujuan program secara SMART (Specific, Measurable, Achievable, Relevant, Time-bound).",
+          "User persona development dengan demographic, psychographic, dan behavior patterns.",
+          "User story mapping dengan acceptance criteria yang jelas.",
+          "Identifikasi masalah inti dengan root cause analysis (5 Whys, Fishbone).",
+          "List fitur wajib (Must Have), penting (Should Have), opsional (Could Have), future (Won't Have - MoSCoW).",
+          "Tetapkan input → proses → output dengan data flow lengkap.",
+          "Buat acceptance criteria, edge case, error scenarios, dan batasan sistem.",
+          "Non-functional requirements: performance, scalability, security, usability.",
+          "Compliance requirements: GDPR, data privacy, industry standards.",
+          "Integration requirements dengan sistem existing.",
+          "Define API contracts dan data schemas."
+        ],
+        "methodologies": [
+          "User Story Mapping",
+          "MoSCoW Prioritization",
+          "SMART Goals Framework",
+          "Jobs To Be Done (JTBD)",
+          "Value Proposition Canvas"
+        ],
+        "outputs": [
+          "Requirements Document (SRS)",
+          "User Stories Backlog",
+          "Acceptance Criteria Matrix",
+          "Constraints & Assumptions Log"
+        ]
+      },
+
+      "2_architecture_design": {
+        "enabled": true,
+        "level": "enterprise",
+        "tasks": [
+          "Bangun high-level architecture diagram (C4 Model: Context, Container, Component, Code).",
+          "Design system architecture: monolithic, microservices, serverless, atau hybrid.",
+          "Buat detailed flowchart untuk alur bisnis utama.",
+          "Data flow diagram (DFD) level 0, 1, dan 2 dengan boundary analysis.",
+          "Definisikan modul, layer, dan dependency dengan clear boundaries.",
+          "Pilih teknologi stack dengan justification matrix (pros/cons/fit).",
+          "Rancang struktur folder yang scalable dan maintainable.",
+          "Tentukan design pattern: MVC, MVVM, Clean Architecture, Hexagonal, DDD.",
+          "Database schema design dengan normalization dan indexing strategy.",
+          "API design dengan RESTful principles atau GraphQL schema.",
+          "Security architecture: authentication, authorization, encryption strategy.",
+          "Caching strategy dan state management approach.",
+          "Error handling dan logging architecture.",
+          "Monitoring dan observability design.",
+          "Disaster recovery dan backup strategy.",
+          "Scalability plan: horizontal vs vertical scaling.",
+          "Validasi konsistensi arsitektur dengan automated architecture tests."
+        ],
+        "patterns": {
+          "architectural": ["Clean Architecture", "Hexagonal", "Onion", "DDD", "CQRS", "Event Sourcing"],
+          "design": ["Factory", "Builder", "Singleton", "Strategy", "Observer", "Repository", "Unit of Work"],
+          "integration": ["API Gateway", "Service Mesh", "Event-Driven", "Message Queue", "Pub/Sub"]
+        },
+        "outputs": [
+          "Architecture Design Document (ADD)",
+          "C4 Architecture Diagrams",
+          "Database Schema (ERD)",
+          "API Specification (OpenAPI/Swagger)",
+          "Technology Decision Records (ADR)"
+        ]
+      },
+
+      "3_planning": {
+        "enabled": true,
+        "level": "agile",
+        "tasks": [
+          "Breakdown epic menjadi user stories, tasks, dan subtasks.",
+          "Identifikasi dependency antar modul dengan dependency graph.",
+          "Prioritaskan fitur kritikal dengan RICE Score (Reach, Impact, Confidence, Effort).",
+          "Tentukan sprint plan dan release roadmap.",
+          "Estimation dengan Planning Poker atau T-Shirt Sizing.",
+          "Identifikasi bottleneck dan critical path.",
+          "Resource allocation dan team capacity planning.",
+          "Tambahkan risiko potensial dengan RAID log (Risks, Assumptions, Issues, Dependencies).",
+          "Define Definition of Done (DoD) untuk setiap task.",
+          "Setup sprint ceremonies: planning, daily standup, review, retro.",
+          "Create burndown dan velocity tracking mechanism."
+        ],
+        "frameworks": ["Scrum", "Kanban", "SAFe", "LeSS"],
+        "tools": ["Sprint Backlog", "Burndown Chart", "Velocity Tracker", "Risk Register"],
+        "outputs": [
+          "Sprint Backlog",
+          "Release Plan",
+          "Risk Mitigation Plan",
+          "Resource Allocation Matrix"
+        ]
+      },
+
+      "4_implementation": {
+        "enabled": true,
+        "level": "expert",
+        "principles": {
+          "SOLID": true,
+          "DRY": true,
+          "KISS": true,
+          "YAGNI": true,
+          "Clean Code": true,
+          "Separation of Concerns": true
+        },
+        "tasks": [
+          "Mulai dari core business logic dengan TDD approach.",
+          "Ikuti SOLID principles: SRP, OCP, LSP, ISP, DIP.",
+          "Hindari hardcoding sepenuhnya - gunakan config, env vars, atau database.",
+          "Buat interface/contract untuk semua modul utama (dependency injection ready).",
+          "Implement comprehensive error handling dengan custom error types.",
+          "Pastikan setiap modul reusable, testable, dan maintainable.",
+          "Predict missing functions dengan static analysis sebelum error muncul.",
+          "Code review automation dengan linting dan static analysis.",
+          "Implement design patterns yang sesuai dengan context.",
+          "Async programming best practices untuk I/O operations.",
+          "Implement proper logging dengan structured logging (JSON logs).",
+          "Add tracing dan distributed tracing untuk microservices.",
+          "Implement feature flags untuk gradual rollout.",
+          "Add telemetry dan metrics collection.",
+          "Database transactions dan connection pooling.",
+          "Implement retry mechanism dan circuit breaker untuk external calls.",
+          "Input validation di semua entry points.",
+          "Output sanitization untuk prevent injection.",
+          "Implement rate limiting dan throttling.",
+          "Add health check endpoints."
+        ],
+        "codeQuality": {
+          "maxCyclomaticComplexity": 10,
+          "maxFunctionLength": 50,
+          "maxFileLength": 500,
+          "minTestCoverage": 80,
+          "duplicationThreshold": 3
+        },
+        "outputs": [
+          "Source Code",
+          "Unit Tests",
+          "Integration Tests",
+          "Code Coverage Report"
+        ]
+      },
+
+      "5_security": {
+        "enabled": true,
+        "level": "paranoid",
+        "frameworks": ["OWASP Top 10", "CWE Top 25", "SANS Top 25"],
+        "tasks": [
+          "Input validation di SEMUA entry points tanpa exception.",
+          "Output encoding untuk prevent XSS.",
+          "Parameterized queries untuk prevent SQL injection.",
+          "Sanitize data dan escape special characters.",
+          "Content Security Policy (CSP) implementation.",
+          "HTTPS only dengan TLS 1.3+.",
+          "Implement CORS dengan whitelist approach.",
+          "JWT/OAuth2 untuk authentication dengan proper token management.",
+          "Role-Based Access Control (RBAC) atau Attribute-Based (ABAC).",
+          "Minimal permission untuk setiap proses (Principle of Least Privilege).",
+          "Secrets management dengan vault atau secret manager.",
+          "Audit logging untuk sensitive operations.",
+          "Audit logic sensitif secara otomatis dengan SAST tools.",
+          "Encryption at rest dan in transit (AES-256, RSA).",
+          "Hash passwords dengan bcrypt/argon2 (NEVER plain text atau MD5).",
+          "Implement rate limiting untuk prevent brute force.",
+          "Session management dengan secure cookies.",
+          "CSRF protection dengan tokens.",
+          "Prevent clickjacking dengan X-Frame-Options.",
+          "Security headers: HSTS, X-Content-Type-Options, X-XSS-Protection.",
+          "Dependency vulnerability scanning dengan Snyk/Dependabot.",
+          "Container security scanning untuk Docker images.",
+          "Threat modeling dengan STRIDE atau PASTA.",
+          "Penetration testing simulation.",
+          "Implement WAF (Web Application Firewall).",
+          "DDoS protection strategy.",
+          "Data masking untuk PII dalam logs.",
+          "Regular security updates dan patch management."
+        ],
+        "checks": {
+          "SAST": true,
+          "DAST": true,
+          "IAST": true,
+          "SCA": true,
+          "secretScanning": true,
+          "containerScanning": true
+        },
+        "outputs": [
+          "Security Assessment Report",
+          "Threat Model Document",
+          "Vulnerability Scan Results",
+          "Penetration Test Report"
+        ]
+      },
+
+      "6_optimization": {
+        "enabled": true,
+        "level": "performance",
+        "tasks": [
+          "Optimasi SETELAH build stabil dan tested (premature optimization is evil).",
+          "Profiling dengan CPU dan memory profiler.",
+          "Periksa N+1 query problem.",
+          "Optimize hot paths dengan algoritma lebih efisien.",
+          "Database query optimization dengan EXPLAIN ANALYZE.",
+          "Add proper indexing strategy.",
+          "Implement caching layer: in-memory, Redis, CDN.",
+          "Lazy loading untuk resource berat.",
+          "Code splitting dan bundle optimization untuk frontend.",
+          "Image optimization dan lazy loading.",
+          "Gzip/Brotli compression untuk text resources.",
+          "Connection pooling untuk database.",
+          "Async processing untuk long-running tasks.",
+          "Background job processing dengan queue.",
+          "Load balancing strategy.",
+          "Database sharding untuk horizontal scaling.",
+          "Read replica untuk read-heavy workloads.",
+          "CDN untuk static assets.",
+          "Optimize memory usage dan prevent memory leaks.",
+          "Reduce garbage collection pressure.",
+          "Network optimization: reduce latency, optimize bandwidth.",
+          "API response pagination.",
+          "GraphQL query optimization.",
+          "Reduce time to first byte (TTFB).",
+          "Core Web Vitals optimization (LCP, FID, CLS)."
+        ],
+        "metrics": {
+          "targetResponseTime": "< 200ms p95",
+          "targetThroughput": "> 1000 req/s",
+          "targetCPU": "< 70%",
+          "targetMemory": "< 80%",
+          "targetErrorRate": "< 0.1%"
+        },
+        "outputs": [
+          "Performance Test Report",
+          "Profiling Results",
+          "Optimization Recommendations"
+        ]
+      },
+
+      "7_testing": {
+        "enabled": true,
+        "level": "comprehensive",
+        "strategy": "Test Pyramid",
+        "tasks": [
+          "Unit test setiap function/method dengan 80%+ coverage.",
+          "Integration test untuk modul interactions.",
+          "E2E test untuk critical user journeys.",
+          "API contract testing.",
+          "Smoke test untuk deployment validation.",
+          "Regression test suite untuk prevent breaking changes.",
+          "Performance test: load, stress, spike, soak.",
+          "Security testing: OWASP ZAP, Burp Suite.",
+          "Accessibility testing (WCAG 2.1).",
+          "Cross-browser testing.",
+          "Mobile responsiveness testing.",
+          "Chaos engineering untuk resilience testing.",
+          "Canary testing untuk gradual rollout.",
+          "A/B testing framework.",
+          "Synthetic monitoring.",
+          "Mutation testing untuk test quality.",
+          "Property-based testing untuk edge cases.",
+          "Snapshot testing untuk UI.",
+          "Visual regression testing.",
+          "Test data management dan fixtures.",
+          "Mocking dan stubbing external dependencies.",
+          "Test environment parity dengan production.",
+          "Automated test execution dalam CI/CD.",
+          "Test reporting dan analytics.",
+          "Flaky test detection dan remediation."
+        ],
+        "coverage": {
+          "unit": "> 80%",
+          "integration": "> 70%",
+          "e2e": "> 60%",
+          "critical_paths": "100%"
+        },
+        "outputs": [
+          "Test Suite",
+          "Test Coverage Report",
+          "Test Execution Results",
+          "Defect Log"
+        ]
+      },
+
+      "8_documentation": {
+        "enabled": true,
+        "level": "comprehensive",
+        "philosophy": "Documentation as Code",
+        "tasks": [
+          "README.md dengan quick start dan overview.",
+          "CONTRIBUTING.md untuk contributor guidelines.",
+          "CODE_OF_CONDUCT.md untuk community guidelines.",
+          "CHANGELOG.md dengan semantic versioning.",
+          "Architecture Decision Records (ADR).",
+          "API documentation dengan OpenAPI/Swagger.",
+          "Code documentation dengan inline comments dan docstrings.",
+          "Architecture diagrams dengan C4 model.",
+          "Sequence diagrams untuk complex flows.",
+          "Entity Relationship Diagrams (ERD).",
+          "Deployment diagram.",
+          "User manual dan admin guide.",
+          "Troubleshooting guide.",
+          "FAQ document.",
+          "Runbook untuk operations.",
+          "Disaster recovery procedures.",
+          "Security guidelines.",
+          "Performance tuning guide.",
+          "Migration guides untuk upgrades.",
+          "Release notes.",
+          "Video tutorials untuk complex features.",
+          "Interactive API explorer.",
+          "Code examples dan snippets.",
+          "Best practices guide.",
+          "Anti-patterns to avoid.",
+          "Glossary of terms."
+        ],
+        "tools": ["MkDocs", "Docusaurus", "Swagger UI", "Storybook", "JSDoc", "GoDoc"],
+        "outputs": [
+          "Technical Documentation",
+          "User Documentation",
+          "API Documentation",
+          "Architecture Documentation"
+        ]
+      },
+
+      "9_versioning": {
+        "enabled": true,
+        "strategy": "Semantic Versioning 2.0.0",
+        "tasks": [
+          "Semantic versioning: MAJOR.MINOR.PATCH.",
+          "MAJOR: breaking changes.",
+          "MINOR: backward-compatible features.",
+          "PATCH: backward-compatible bug fixes.",
+          "Pre-release versions: alpha, beta, rc.",
+          "Build metadata for CI/CD builds.",
+          "Git tagging untuk setiap release.",
+          "Generate changelog otomatis dari commit messages.",
+          "Conventional Commits untuk structured commit messages.",
+          "Release notes generation.",
+          "Deprecation warnings untuk breaking changes.",
+          "Migration scripts untuk version upgrades.",
+          "Backward compatibility testing.",
+          "Version compatibility matrix.",
+          "API versioning strategy.",
+          "Database schema versioning dengan migrations.",
+          "Feature flag versioning.",
+          "Confidence score calculation sebelum release.",
+          "Release approval workflow.",
+          "Rollback procedures."
+        ],
+        "commitConvention": "Conventional Commits",
+        "outputs": [
+          "Version Tags",
+          "CHANGELOG.md",
+          "Release Notes",
+          "Migration Scripts"
+        ]
+      },
+
+      "10_deployment": {
+        "enabled": true,
+        "level": "production",
+        "strategy": ["Blue-Green", "Canary", "Rolling", "A/B"],
+        "tasks": [
+          "Deployment plan dengan rollback strategy.",
+          "Environment-specific configuration.",
+          "Infrastructure as Code (Terraform, CloudFormation).",
+          "Container orchestration (Kubernetes, Docker Swarm).",
+          "CI/CD pipeline setup (GitHub Actions, GitLab CI, Jenkins).",
+          "Automated build process.",
+          "Automated testing dalam pipeline.",
+          "Security scanning dalam pipeline.",
+          "Code quality gates.",
+          "Artifact versioning dan storage.",
+          "Database migration automation.",
+          "Zero-downtime deployment.",
+          "Health checks dan readiness probes.",
+          "Service mesh configuration (Istio, Linkerd).",
+          "Load balancer setup.",
+          "Auto-scaling configuration.",
+          "Monitoring dan alerting setup.",
+          "Log aggregation (ELK, Loki).",
+          "Distributed tracing (Jaeger, Zipkin).",
+          "APM integration (New Relic, Datadog).",
+          "Backup automation.",
+          "Disaster recovery testing.",
+          "SSL/TLS certificate management.",
+          "DNS configuration.",
+          "CDN setup.",
+          "Firewall rules.",
+          "Network policies.",
+          "Secret injection.",
+          "Environment validator pre-deployment.",
+          "Smoke test post-deployment.",
+          "Gradual rollout dengan feature flags.",
+          "Rollback automation pada failure detection."
+        ],
+        "environments": ["Development", "Staging", "UAT", "Production"],
+        "outputs": [
+          "Deployment Scripts",
+          "Infrastructure Code",
+          "CI/CD Configuration",
+          "Deployment Documentation"
+        ]
+      },
+
+      "11_maintenance": {
+        "enabled": true,
+        "level": "proactive",
+        "philosophy": "Observability First",
+        "tasks": [
+          "Monitor error patterns dengan anomaly detection.",
+          "Real-time alerting untuk critical issues.",
+          "SLA/SLO monitoring.",
+          "Predictive analytics untuk anticipate failures.",
+          "Log analysis dengan machine learning.",
+          "Trend analysis untuk capacity planning.",
+          "Performance monitoring dan profiling.",
+          "Security monitoring dan threat detection.",
+          "User behavior analytics.",
+          "Cost monitoring dan optimization.",
+          "Technical debt tracking.",
+          "Regular dependency updates.",
+          "Security patch management.",
+          "Refactor legacy code incrementally.",
+          "Code quality metrics tracking.",
+          "Bug triage dan prioritization.",
+          "Incident management procedures.",
+          "Post-mortem analysis untuk major incidents.",
+          "Continuous improvement backlog.",
+          "Feature usage analytics.",
+          "User feedback collection dan analysis.",
+          "A/B test results analysis.",
+          "Regular security audits.",
+          "Compliance monitoring.",
+          "License management.",
+          "Backup verification.",
+          "Disaster recovery drills.",
+          "Knowledge base maintenance.",
+          "Team training dan skill development.",
+          "Regression monitor untuk detect degradation.",
+          "Auto-remediation untuk known issues."
+        ],
+        "SLOs": {
+          "availability": "99.9%",
+          "errorRate": "< 0.1%",
+          "responseTime": "< 200ms p95",
+          "MTTR": "< 1 hour"
+        },
+        "outputs": [
+          "Monitoring Dashboards",
+          "Incident Reports",
+          "Post-Mortem Documents",
+          "Maintenance Log"
+        ]
+      },
+
+      "12_evolution": {
+        "enabled": true,
+        "level": "adaptive",
+        "tasks": [
+          "Continuous user feedback loop.",
+          "Feature request prioritization.",
+          "Market trend analysis.",
+          "Competitor analysis.",
+          "Technology radar untuk emerging tech.",
+          "Experimentation culture dengan A/B testing.",
+          "Innovation backlog.",
+          "Proof of Concept (PoC) untuk new ideas.",
+          "Technical spike untuk research.",
+          "Architectural evolution planning.",
+          "Modernization strategy untuk legacy components.",
+          "API evolution dengan backward compatibility.",
+          "Database schema evolution.",
+          "Microservices migration strategy.",
+          "Cloud migration roadmap.",
+          "Platform engineering improvements.",
+          "Developer experience enhancements.",
+          "Automation opportunities identification.",
+          "AI/ML integration possibilities.",
+          "Process improvement initiatives.",
+          "Team retrospectives.",
+          "Best practices sharing.",
+          "Open source contribution strategy.",
+          "Community building.",
+          "Partnership opportunities.",
+          "Scalability roadmap.",
+          "Sustainability considerations.",
+          "Green computing practices."
+        ]
+      }
+    }
+  },
+
+  "providers": {
+    "filesystem": {
+      "type": "filesystem",
+      "root": "${workspaceRoot}",
+      "readLargeFiles": true,
+      "maxFileSizeMB": 500,
+      "enableIndexing": true,
+      "enableSearch": true,
+      "deepSemanticSearch": true,
+      "watch": true,
+      "autoTrackChanges": true,
+      "autoRebuildFlowMap": true,
+      "detectArchitecturePatterns": true,
+      "autoDetectFileConflicts": true,
+      "crossFileAnalysis": true,
+      "dependencyGraphBuilder": true,
+      "codeSmellDetection": true,
+      "duplicateCodeDetection": true,
+      "deadCodeDetection": true,
+      "unusedDependencyDetection": true,
+      "securityVulnerabilityScanning": true,
+      "licenseCompliance": true,
+
+      "ignore": [
+        "**/node_modules/**",
+        "**/vendor/**",
+        "**/bin/**",
+        "**/obj/**",
+        "**/build/**",
+        "**/dist/**",
+        "**/target/**",
+        "**/out/**",
+        "**/.next/**",
+        "**/.nuxt/**",
+        "**/logs/**",
+        "**/*.log",
+        "**/*.db",
+        "**/*.db-shm",
+        "**/*.db-wal",
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/.DS_Store",
+        "**/Thumbs.db",
+        "**/__pycache__/**",
+        "**/*.pyc",
+        "**/.pytest_cache/**",
+        "**/.coverage",
+        "**/coverage/**",
+        "**/.env",
+        "**/.env.local",
+        "**/secrets/**"
+      ],
+
+      "watchPatterns": [
+        "**/*.go",
+        "**/*.js",
+        "**/*.ts",
+        "**/*.py",
+        "**/*.java",
+        "**/*.cs",
+        "**/*.rs",
+        "**/*.cpp",
+        "**/*.c",
+        "**/*.h",
+        "**/*.json",
+        "**/*.yaml",
+        "**/*.yml",
+        "**/*.toml",
+        "**/*.md",
+        "**/Dockerfile",
+        "**/docker-compose.yml",
+        "**/Makefile"
+      ]
+    },
+
+    "http": {
+      "type": "http",
+      "allowedDomains": [
+        "github.com",
+        "raw.githubusercontent.com",
+        "pkg.go.dev",
+        "go.dev",
+        "go.mau.fi",
+        "docs.github.com",
+        "stackoverflow.com",
+        "developer.mozilla.org",
+        "docs.python.org",
+        "docs.rs",
+        "doc.rust-lang.org",
+        "docs.oracle.com"
+      ],
+      "autoFetch": true,
+      "deepFetch": true,
+      "recursiveRead": true,
+      "autoCrossReference": true,
+      "watchUpdates": true,
+      "caching": true,
+      "cacheTTL": 3600,
+      "retryStrategy": {
+        "maxRetries": 3,
+        "backoff": "exponential",
+        "retryOn": [408, 429, 500, 502, 503, 504]
+      },
+      "rateLimit": {
+        "enabled": true,
+        "requestsPerMinute": 60
+      }
+    },
+
+    "executor": {
+      "type": "command",
+      "shell": "auto",
+      "timeout": 300000,
+      "workingDirectory": "${workspaceRoot}",
+      "environment": {
+        "inherit": true,
+        "custom": {}
+      },
+      "commands": {
+        "go": {
+          "build": "go build ./...",
+          "run": "go run .",
+          "test": "go test -v -race -coverprofile=coverage.out ./...",
+          "test_coverage": "go test -v -race -coverprofile=coverage.out ./... && go tool cover -html=coverage.out",
+          "bench": "go test -bench=. -benchmem ./...",
+          "lint": "golangci-lint run --config .golangci.yml",
+          "vet": "go vet ./...",
+          "tidy": "go mod tidy",
+          "vendor": "go mod vendor",
+          "format": "gofmt -w .",
+          "imports": "goimports -w .",
+          "security": "gosec ./...",
+          "staticcheck": "staticcheck ./...",
+          "ineffassign": "ineffassign ./...",
+          "misspell": "misspell -error .",
+          "generate": "go generate ./..."
+        },
+        "git": {
+          "status": "git status",
+          "diff": "git diff",
+          "add": "git add .",
+          "commit": "git commit -m",
+          "push": "git push",
+          "pull": "git pull",
+          "branch": "git branch",
+          "checkout": "git checkout",
+          "merge": "git merge",
+          "log": "git log --oneline --graph --decorate",
+          "tag": "git tag"
+        },
+        "docker": {
+          "build": "docker build -t ${projectName}:latest .",
+          "run": "docker run -it ${projectName}:latest",
+          "compose_up": "docker-compose up -d",
+          "compose_down": "docker-compose down",
+          "ps": "docker ps",
+          "logs": "docker logs -f"
+        },
+        "make": {
+          "build": "make build",
+          "test": "make test",
+          "clean": "make clean",
+          "install": "make install",
+          "all": "make all"
+        }
+      },
+      "preCommands": {
+        "format": true,
+        "lint": true,
+        "test": true
+      },
+      "autoCommit": {
+        "enabled": true,
+        "message": "auto-dev: ${description}",
+        "includeChangelog": true
+      }
+    },
+
+    "ai_assistant": {
+      "type": "internal",
+      "capabilities": [
+        "code_generation",
+        "code_review",
+        "bug_detection",
+        "refactoring",
+        "documentation",
+        "testing",
+        "architecture_design",
+        "security_audit"
+      ],
+      "models": {
+        "primary": "claude-sonnet-4",
+        "fallback": "claude-sonnet-3.5"
+      }
+    }
+  },
+
+  "datasets": {
+    "whatsmeow_examples": {
+      "type": "http",
+      "url": "https://raw.githubusercontent.com/tulir/whatsmeow/master/examples",
+      "refresh": "weekly",
+      "deepRead": true,
+      "recursive": true,
+      "index": true
+    },
+    "golang_stdlib": {
+      "type": "http",
+      "url": "https://raw.githubusercontent.com/golang/go/master/src",
+      "refresh": "weekly",
+      "deepRead": false,
+      "selective": true,
+      "index": true
+    },
+    "golang_best_practices": {
+      "type": "http",
+      "url": "https://github.com/golang-standards/project-layout",
+      "refresh": "monthly",
+      "deepRead": true
+    },
+    "security_patterns": {
+      "type": "internal",
+      "source": "knowledge_base",
+      "topics": ["OWASP", "CWE", "SANS", "secure_coding"]
+    },
+    "design_patterns": {
+      "type": "internal",
+      "source": "knowledge_base",
+      "topics": ["GoF", "enterprise_patterns", "cloud_patterns", "microservices_patterns"]
+    }
+  },
+
+  "syntheticAPILayer": {
+    "enabled": true,
+    "version": "3.0",
+    "purpose": "Ultra-intelligent API synthesis dan abstraction layer untuk create missing features dan workarounds",
+    
+    "capabilities": {
+      "createMissingFeatures": true,
+      "simulateUnavailableAPI": true,
+      "autoDesignWorkarounds": true,
+      "deepLogicSynthesis": true,
+      "protocolAbstraction": true,
+      "behaviorPrediction": true,
+      "generateFallbacks": true,
+      "autoWrapCustomLogic": true,
+      "autoInferNewFeatures": true,
+      "contextualAPIUnderstanding": true,
+      "runtimeAdaptation": true,
+      "smartRetryMechanism": true,
+      "circuitBreakerPattern": true,
+      "adaptiveTimeout": true,
+      "intelligentCaching": true,
+      "apiVersionNegotiation": true,
+      "backwardCompatibilityLayer": true,
+      "forwardCompatibilityLayer": true,
+      "apiEvolutionTracking": true,
+      "deprecationHandling": true
+    },
+
+    "strategies": {
+      "feature_inference": {
+        "enabled": true,
+        "analyze_api_patterns": true,
+        "predict_missing_methods": true,
+        "generate_wrapper_functions": true,
+        "create_polyfills": true,
+        "build_adapter_layers": true
+      },
+      
+      "protocol_understanding": {
+        "enabled": true,
+        "reverse_engineer_protocols": true,
+        "understand_message_formats": true,
+        "infer_state_machines": true,
+        "predict_event_flows": true,
+        "map_dependencies": true
+      },
+
+      "workaround_generation": {
+        "enabled": true,
+        "analyze_limitations": true,
+        "design_alternatives": true,
+        "implement_shims": true,
+        "create_proxy_layers": true,
+        "build_compatibility_bridges": true
+      },
+
+      "resilience": {
+        "enabled": true,
+        "auto_retry": {
+          "enabled": true,
+          "max_attempts": 3,
+          "backoff": "exponential",
+          "jitter": true
+        },
+        "circuit_breaker": {
+          "enabled": true,
+          "failure_threshold": 5,
+          "timeout": 30000,
+          "reset_timeout": 60000
+        },
+        "bulkhead": {
+          "enabled": true,
+          "max_concurrent": 10,
+          "max_queue": 100
+        },
+        "timeout": {
+          "enabled": true,
+          "default": 30000,
+          "adaptive": true
+        }
+      }
+    },
+
+    "learning": {
+      "api_behavior_learning": true,
+      "pattern_recognition": true,
+      "anomaly_detection": true,
+      "performance_optimization": true,
+      "adaptive_caching": true,
+      "predictive_prefetching": true
+    }
+  },
+
+  "autoDevMode": {
+    "enabled": true,
+    "version": "3.0",
+    "level": "autonomous",
+    "purpose": "Fully autonomous development mode dengan self-healing dan continuous improvement",
+
+    "core_features": {
+      "autoCommit": true,
+      "autoPush": false,
+      "autoChangelog": true,
+      "autoFixBeforeBuild": true,
+      "autoRefactorOnError": true,
+      "autoStructureOptimizer": true,
+      "autoSyncWhatsmeowAPI": true,
+      "autoTestOnChange": true,
+      "autoLintOnSave": true,
+      "autoMigrateFiles": true,
+      "githubIntegration": true,
+      "safeMode": true,
+      "riskAssessment": true,
+      "impactAnalysis": true,
+      "rollbackCapability": true
+    },
+
+    "autonomous_behaviors": {
+      "code_generation": {
+        "enabled": true,
+        "generate_boilerplate": true,
+        "scaffold_structures": true,
+        "implement_interfaces": true,
+        "create_tests": true,
+        "generate_mocks": true,
+        "create_fixtures": true
+      },
+
+      "code_improvement": {
+        "enabled": true,
+        "refactor_code_smells": true,
+        "optimize_performance": true,
+        "improve_readability": true,
+        "reduce_complexity": true,
+        "eliminate_duplication": true,
+        "modernize_syntax": true,
+        "apply_best_practices": true
+      },
+
+      "bug_detection": {
+        "enabled": true,
+        "static_analysis": true,
+        "runtime_analysis": true,
+        "pattern_matching": true,
+        "anomaly_detection": true,
+        "predictive_bug_finding": true,
+        "security_vulnerability_scanning": true
+      },
+
+      "auto_healing": {
+        "enabled": true,
+        "detect_failures": true,
+        "diagnose_root_cause": true,
+        "generate_fixes": true,
+        "apply_fixes": true,
+        "verify_fixes": true,
+        "learn_from_fixes": true
+      },
+
+      "documentation": {
+        "enabled": true,
+        "auto_comment_code": true,
+        "generate_docstrings": true,
+        "update_readme": true,
+        "create_examples": true,
+        "maintain_changelog": true,
+        "generate_api_docs": true
+      },
+
+      "testing": {
+        "enabled": true,
+        "generate_unit_tests": true,
+        "generate_integration_tests": true,
+        "identify_edge_cases": true,
+        "create_test_data": true,
+        "maintain_test_coverage": true,
+        "fix_failing_tests": true
+      },
+
+      "dependency_management": {
+        "enabled": true,
+        "update_dependencies": true,
+        "resolve_conflicts": true,
+        "remove_unused": true,
+        "suggest_alternatives": true,
+        "security_audit": true,
+        "license_compliance": true
+      },
+
+      "architecture_evolution": {
+        "enabled": true,
+        "detect_architectural_issues": true,
+        "suggest_improvements": true,
+        "plan_refactoring": true,
+        "execute_safe_migrations": true,
+        "maintain_consistency": true
+      }
+    },
+
+    "workflow_automation": {
+      "pre_commit": {
+        "enabled": true,
+        "steps": ["format", "lint", "test", "security_scan"]
+      },
+      "pre_push": {
+        "enabled": true,
+        "steps": ["full_test", "build", "integration_test"]
+      },
+      "on_file_change": {
+        "enabled": true,
+        "steps": ["incremental_test", "quick_lint"]
+      },
+      "scheduled": {
+        "enabled": true,
+        "daily": ["dependency_audit", "security_scan", "performance_check"],
+        "weekly": ["full_refactor_analysis", "documentation_update"],
+        "monthly": ["architecture_review", "tech_debt_assessment"]
+      }
+    },
+
+    "safety_mechanisms": {
+      "backup_before_change": true,
+      "incremental_changes": true,
+      "verification_after_change": true,
+      "automatic_rollback_on_failure": true,
+      "change_approval_workflow": false,
+      "impact_simulation": true,
+      "dry_run_mode": true,
+      "sandbox_testing": true
+    },
+
+    "learning_system": {
+      "enabled": true,
+      "learn_from_commits": true,
+      "learn_from_errors": true,
+      "learn_from_refactoring": true,
+      "learn_from_reviews": true,
+      "pattern_extraction": true,
+      "best_practice_identification": true,
+      "anti_pattern_detection": true,
+      "context_aware_suggestions": true
+    }
+  },
+
+  "logIntelligence": {
+    "enabled": true,
+    "version": "3.0",
+    "level": "expert",
+    "purpose": "Ultra-intelligent log analysis dengan predictive capabilities",
+
+    "capabilities": {
+      "readLogs": true,
+      "deepAnalyzeLogs": true,
+      "detectPatterns": true,
+      "autoExplainErrors": true,
+      "predictFailurePoints": true,
+      "rootCauseFromLogs": true,
+      "autoSuggestFixes": true,
+      "selfHealingLogs": true,
+      "correlateEvents": true,
+      "anomalyDetection": true,
+      "trendAnalysis": true,
+      "performanceInsights": true,
+      "securityInsights": true,
+      "businessInsights": true
+    },
+
+    "analysis_engines": {
+      "pattern_recognition": {
+        "enabled": true,
+        "error_patterns": true,
+        "success_patterns": true,
+        "performance_patterns": true,
+        "security_patterns": true,
+        "business_patterns": true,
+        "user_behavior_patterns": true
+      },
+
+      "predictive_analytics": {
+        "enabled": true,
+        "failure_prediction": true,
+        "capacity_prediction": true,
+        "anomaly_prediction": true,
+        "trend_forecasting": true,
+        "resource_usage_prediction": true
+      },
+
+      "root_cause_analysis": {
+        "enabled": true,
+        "automatic_rca": true,
+        "multi_source_correlation": true,
+        "dependency_analysis": true,
+        "timeline_reconstruction": true,
+        "impact_assessment": true
+      },
+
+      "recommendation_engine": {
+        "enabled": true,
+        "fix_suggestions": true,
+        "optimization_suggestions": true,
+        "architecture_suggestions": true,
+        "configuration_suggestions": true,
+        "scaling_suggestions": true
+      }
+    },
+
+    "log_sources": {
+      "application_logs": true,
+      "system_logs": true,
+      "database_logs": true,
+      "web_server_logs": true,
+      "security_logs": true,
+      "audit_logs": true,
+      "performance_logs": true,
+      "custom_logs": true
+    },
+
+    "alerting": {
+      "enabled": true,
+      "smart_alerting": true,
+      "alert_deduplication": true,
+      "alert_correlation": true,
+      "alert_prioritization": true,
+      "intelligent_thresholds": true,
+      "adaptive_thresholds": true,
+      "anomaly_based_alerting": true,
+      "channels": ["console", "file", "webhook", "email", "slack"]
+    },
+
+    "visualization": {
+      "enabled": true,
+      "real_time_dashboards": true,
+      "historical_trends": true,
+      "correlation_graphs": true,
+      "flow_diagrams": true,
+      "heatmaps": true,
+      "timeline_views": true
+    }
+  },
+
+  "settings": {
+    "autoIndexOnOpen": true,
+    "autoReloadOnFileChange": true,
+    "autoUnderstandImports": true,
+    "followGoImports": true,
+    "readLargeFiles": true,
+    "streamLargeFiles": true,
+    "incrementalParsing": true,
+
+    "deepCodeUnderstanding": true,
+    "multiFileReasoning": true,
+    "aggressiveErrorDetection": true,
+    "smartRefactor": true,
+    "predictAPIUsage": true,
+    "ideaExpansion": true,
+    "preventCriticalFileDamage": true,
+    "crossModuleReasoning": true,
+    "semanticCodeSearch": true,
+    "intelligentCodeCompletion": true,
+    "contextAwareRefactoring": true,
+    "predictiveTyping": true,
+
+    "performance": {
+      "parallel_processing": true,
+      "max_threads": "auto",
+      "cache_strategy": "aggressive",
+      "lazy_loading": true,
+      "incremental_updates": true,
+      "debounce_ms": 300
+    },
+
+    "memory": {
+      "enabled": true,
+      "depth": "quantum",
+      "strategy": "hybrid",
+      "persistence": "long_term",
+      
+      "remember": {
+        "projectStructure": true,
+        "programmingStyle": true,
+        "userIntent": true,
+        "fileRelations": true,
+        "featurePatterns": true,
+        "eventFlow": true,
+        "architectureDecisions": true,
+        "bugPatterns": true,
+        "refactoringHistory": true,
+        "performanceMetrics": true,
+        "securityIssues": true,
+        "userPreferences": true,
+        "conversationContext": true,
+        "decisionRationale": true,
+        "technicalDebt": true
+      },
+
+      "context_window": {
+        "size": "unlimited",
+        "smart_compression": true,
+        "priority_based": true,
+        "semantic_chunking": true,
+        "relevance_scoring": true
+      },
+
+      "knowledge_graph": {
+        "enabled": true,
+        "build_relationships": true,
+        "infer_connections": true,
+        "traverse_graph": true,
+        "query_graph": true,
+        "update_graph": true
+      }
+    },
+
+    "collaboration": {
+      "enabled": true,
+      "team_awareness": true,
+      "conflict_prevention": true,
+      "merge_assistance": true,
+      "code_review_automation": true,
+      "pair_programming_mode": true
+    }
+  },
+
+  "ProgramBuilderCore": {
+    "enabled": true,
+    "version": "3.0",
+    "level": "enterprise",
+
+    "corePrinciples": {
+      "clarityFirst": true,
+      "deepRequirementUnderstanding": true,
+      "logicBeforeCoding": true,
+      "secureByDesign": true,
+      "maintainabilityPriority": true,
+      "safeAutomation": true,
+      "riskBoundedDevelopment": true,
+      "testDrivenDevelopment": true,
+      "continuousImprovement": true,
+      "userCentricDesign": true,
+      "performanceByDefault": true,
+      "scalabilityFirst": true
+    },
+
+    "phases": {
+      "1_requirement_analysis": {
+        "enabled": true,
+        "autoExtractUserNeeds": true,
+        "autoDefineProblems": true,
+        "autoListCoreFeatures": true,
+        "autoListOptionalFeatures": true,
+        "autoDefineSuccessCriteria": true,
+        "captureEdgeCases": true,
+        "stakeholderAnalysis": true,
+        "competitorAnalysis": true,
+        "marketResearch": true,
+        "feasibilityStudy": true,
+        "riskAssessment": true,
+        "complianceCheck": true,
+        "accessibilityRequirements": true,
+        "internationalizationNeeds": true
+      },
+
+      "2_architecture_design": {
+        "enabled": true,
+        "autoBuildFlowchart": true,
+        "autoBuildDataFlow": true,
+        "autoPlanFolderStructure": true,
+        "autoSuggestTechStack": true,
+        "autoChooseDesignPattern": true,
+        "autoDetectMissingFlows": true,
+        "architectureValidationLayer": true,
+        "scalabilityPlanning": true,
+        "resilienceDesign": true,
+        "securityArchitecture": true,
+        "dataArchitecture": true,
+        "integrationArchitecture": true,
+        "deploymentArchitecture": true,
+        "monitoringArchitecture": true,
+        "disasterRecoveryPlanning": true
+      },
+
+      "3_planning": {
+        "enabled": true,
+        "autoBreakdownTasks": true,
+        "autoEstimateComplexity": true,
+        "autoPrioritizeDevelopment": true,
+        "predictDependencies": true,
+        "planMinimalViableFeatures": true,
+        "riskImpactAnalysis": true,
+        "resourceAllocation": true,
+        "timelineEstimation": true,
+        "milestoneDefinition": true,
+        "sprintPlanning": true,
+        "capacityPlanning": true,
+        "budgetEstimation": true
+      },
+
+      "4_implementation": {
+        "enabled": true,
+        "autoGenerateModules": true,
+        "autoWriteCoreLogic": true,
+        "autoPreventHardcoding": true,
+        "followCleanCode": true,
+        "ensureErrorHandling": true,
+        "autoCreateInterfaces": true,
+        "predictMissingFunctions": true,
+        "safeModificationLayer": true,
+        "codeGeneration": true,
+        "boilerplateGeneration": true,
+        "interfaceImplementation": true,
+        "dependencyInjection": true,
+        "configurationManagement": true,
+        "loggingIntegration": true,
+        "tracingIntegration": true,
+        "metricsIntegration": true
+      },
+
+      "5_security_layer": {
+        "enabled": true,
+        "validateInput": true,
+        "sanitizeData": true,
+        "autoAuditSensitiveLogic": true,
+        "autoCheckPermissions": true,
+        "autoSuggestEncryption": true,
+        "threatAnalysis": true,
+        "vulnerabilityScanning": true,
+        "penetrationTesting": true,
+        "securityHardening": true,
+        "complianceValidation": true,
+        "secretsManagement": true,
+        "authenticationMechanisms": true,
+        "authorizationControls": true,
+        "auditLogging": true,
+        "incidentResponse": true
+      },
+
+      "6_performance_optimization": {
+        "enabled": true,
+        "detectSlowCode": true,
+        "optimizeLoops": true,
+        "optimizeDatabaseQueries": true,
+        "predictBottlenecks": true,
+        "autoAnalyzeMemoryUsage": true,
+        "cpuProfiling": true,
+        "memoryProfiling": true,
+        "cachingStrategy": true,
+        "loadBalancing": true,
+        "connectionPooling": true,
+        "asyncProcessing": true,
+        "resourceOptimization": true,
+        "networkOptimization": true
+      },
+
+      "7_testing": {
+        "enabled": true,
+        "autoWriteUnitTest": true,
+        "autoWriteIntegrationTest": true,
+        "autoSimulateFailures": true,
+        "autoFixDetectedIssues": true,
+        "testCoverageMonitor": true,
+        "e2eTesting": true,
+        "performanceTesting": true,
+        "securityTesting": true,
+        "accessibilityTesting": true,
+        "usabilityTesting": true,
+        "compatibilityTesting": true,
+        "regressionTesting": true,
+        "smokeTesting": true,
+        "chaosEngineering": true,
+        "mutationTesting": true
+      },
+
+      "8_documentation": {
+        "enabled": true,
+        "autoWriteReadme": true,
+        "autoExplainArchitecture": true,
+        "autoGenerateAPIReference": true,
+        "autoDocumentConfig": true,
+        "autoGenerateFlowDiagram": true,
+        "codeComments": true,
+        "inlineDocumentation": true,
+        "userManuals": true,
+        "adminGuides": true,
+        "troubleshootingGuides": true,
+        "apiDocumentation": true,
+        "architectureDocumentation": true,
+        "deploymentGuides": true,
+        "contributorGuides": true,
+        "changelogMaintenance": true
+      },
+
+      "9_versioning_release": {
+        "enabled": true,
+        "autoTagVersions": true,
+        "autoChangelog": true,
+        "semanticVersioning": true,
+        "confidenceScoreBeforeRelease": true,
+        "releaseNotes": true,
+        "migrationGuides": true,
+        "deprecationWarnings": true,
+        "backwardCompatibility": true,
+        "releaseAutomation": true,
+        "rollbackProcedures": true
+      },
+
+      "10_deployment": {
+        "enabled": true,
+        "autoBuildDeployPlan": true,
+        "autoGenerateInstaller": true,
+        "autoSuggestCI": true,
+        "autoOptimizeForOS": true,
+        "containerization": true,
+        "orchestration": true,
+        "infrastructureAsCode": true,
+        "blueGreenDeployment": true,
+        "canaryDeployment": true,
+        "rollbackCapability": true,
+        "healthChecks": true,
+        "loadBalancerConfig": true,
+        "autoScaling": true,
+        "monitoringSetup": true,
+        "alertingSetup": true
+      },
+
+      "11_maintenance": {
+        "enabled": true,
+        "monitorErrorPatterns": true,
+        "predictFutureIssues": true,
+        "autoRefactorLegacyCode": true,
+        "autoSuggestImprovements": true,
+        "regressionMonitor": true,
+        "performanceMonitoring": true,
+        "securityMonitoring": true,
+        "costMonitoring": true,
+        "usageAnalytics": true,
+        "feedbackCollection": true,
+        "incidentManagement": true,
+        "patchManagement": true,
+        "dependencyUpdates": true,
+        "technicalDebtTracking": true,
+        "continuousImprovement": true
+      }
+    },
+
+    "intelligenceLayers": {
+      "problemUnderstanding": true,
+      "architectureReasoning": true,
+      "codeSynthesis": true,
+      "securityAwareness": true,
+      "performanceReasoning": true,
+      "multiFileMapping": true,
+      "dependencyAwareness": true,
+      "projectMemory": true,
+      "refactorPrediction": true,
+      "architectureStabilityPrediction": true,
+      "bugPrediction": true,
+      "userBehaviorPrediction": true,
+      "scalabilityPrediction": true,
+      "costPrediction": true,
+      "impactAnalysis": true,
+      "contextualUnderstanding": true,
+      "semanticReasoning": true,
+      "causalInference": true,
+      "analogicalReasoning": true,
+      "creativeProbleming": true
+    },
+
+    "automaticBehaviors": {
+      "autoExplainErrors": true,
+      "autoFixOnDetect": true,
+      "autoImproveArchitecture": true,
+      "autoDetectFeatureGaps": true,
+      "inferMissingLogic": true,
+      "autoGenerateFallbackMethods": true,
+      "safeModificationLayer": true,
+      "selfHealingSystem": true,
+      "predictiveDebugging": true,
+      "intelligentRefactoring": true,
+      "adaptiveOptimization": true,
+      "continuousLearning": true,
+      "proactiveMonitoring": true,
+      "automaticRecovery": true,
+      "intelligentCaching": true,
+      "dynamicScaling": true
+    }
+  },
+
+  "qualityAssurance": {
+    "enabled": true,
+    "level": "strict",
+    
+    "codeQuality": {
+      "enabled": true,
+      "linting": true,
+      "formatting": true,
+      "complexity_analysis": true,
+      "duplication_detection": true,
+      "dead_code_detection": true,
+      "code_smell_detection": true,
+      "cognitive_complexity_limit": 15,
+      "cyclomatic_complexity_limit": 10,
+      "maintainability_index_min": 70
+    },
+
+    "testQuality": {
+      "enabled": true,
+      "coverage_minimum": 80,
+      "branch_coverage_minimum": 75,
+      "mutation_score_minimum": 70,
+      "test_quality_score_minimum": 80,
+      "flaky_test_detection": true,
+      "slow_test_detection": true
+    },
+
+    "securityQuality": {
+      "enabled": true,
+      "sast": true,
+      "dast": true,
+      "sca": true,
+      "secret_scanning": true,
+      "container_scanning": true,
+      "vulnerability_threshold": "high"
+    },
+
+    "performanceQuality": {
+      "enabled": true,
+      "response_time_p95": 200,
+      "response_time_p99": 500,
+      "error_rate_max": 0.1,
+      "throughput_min": 1000,
+      "cpu_usage_max": 70,
+      "memory_usage_max": 80
+    }
+  },
+
+  "observability": {
+    "enabled": true,
+    "level": "comprehensive",
+
+    "logging": {
+      "enabled": true,
+      "level": "info",
+      "structured": true,
+      "format": "json",
+      "fields": ["timestamp", "level", "message", "context", "trace_id", "span_id"],
+      "sampling": true,
+      "aggregation": true
+    },
+
+    "metrics": {
+      "enabled": true,
+      "collection_interval": 10,
+      "retention_days": 30,
+      "custom_metrics": true,
+      "business_metrics": true,
+      "technical_metrics": true
+    },
+
+    "tracing": {
+      "enabled": true,
+      "sampling_rate": 0.1,
+      "distributed_tracing": true,
+      "trace_context_propagation": true
+    },
+
+    "profiling": {
+      "enabled": true,
+      "cpu_profiling": true,
+      "memory_profiling": true,
+      "goroutine_profiling": true,
+      "continuous_profiling": true
+    },
+
+    "alerting": {
+      "enabled": true,
+      "rules": [],
+      "channels": ["console", "webhook"],
+      "smart_grouping": true,
+      "auto_remediation": true
+    }
+  },
+
+  "cicd": {
+    "enabled": true,
+    "platform": "github_actions",
+
+    "pipeline": {
+      "stages": ["build", "test", "security", "quality", "deploy"],
+      
+      "build": {
+        "enabled": true,
+        "parallel": true,
+        "cache": true,
+        "optimize": true
+      },
+
+      "test": {
+        "enabled": true,
+        "unit": true,
+        "integration": true,
+        "e2e": true,
+        "performance": true,
+        "security": true,
+        "parallel": true,
+        "fail_fast": false
+      },
+
+      "security": {
+        "enabled": true,
+        "sast": true,
+        "dast": true,
+        "sca": true,
+        "secret_scan": true,
+        "container_scan": true,
+        "compliance_check": true
+      },
+
+      "quality": {
+        "enabled": true,
+        "code_coverage": true,
+        "code_quality": true,
+        "complexity_check": true,
+        "duplication_check": true,
+        "quality_gates": true
+      },
+
+      "deploy": {
+        "enabled": true,
+        "strategy": "blue_green",
+        "auto_rollback": true,
+        "smoke_test": true,
+        "health_check": true,
+        "approval_required": true
+      }
+    },
+
+    "environments": {
+      "development": {
+        "auto_deploy": true,
+        "approval_required": false
+      },
+      "staging": {
+        "auto_deploy": true,
+        "approval_required": false
+      },
+      "production": {
+        "auto_deploy": false,
+        "approval_required": true
+      }
+    }
+  },
+
+  "ai_capabilities": {
+    "enabled": true,
+    "version": "3.0",
+
+    "natural_language_processing": {
+      "enabled": true,
+      "understand_requirements": true,
+      "extract_intents": true,
+      "generate_documentation": true,
+      "code_to_text": true,
+      "text_to_code": true
+    },
+
+    "machine_learning": {
+      "enabled": true,
+      "bug_prediction": true,
+      "performance_prediction": true,
+      "anomaly_detection": true,
+      "pattern_recognition": true,
+      "recommendation_system": true,
+      "adaptive_learning": true
+    },
+
+    "code_intelligence": {
+      "enabled": true,
+      "semantic_search": true,
+      "intelligent_completion": true,
+      "context_aware_refactoring": true,
+      "automatic_bug_fixing": true,
+      "code_generation": true,
+      "test_generation": true,
+      "documentation_generation": true
+    },
+
+    "predictive_analytics": {
+      "enabled": true,
+      "failure_prediction": true,
+      "performance_prediction": true,
+      "capacity_prediction": true,
+      "cost_prediction": true,
+      "risk_prediction": true
+    }
+  }
+}_docs": {
+      "type": "http",
+      "url": "https://pkg.go.dev/go.mau.fi/whatsmeow",
+      "refresh": "daily",
+      "deepRead": true,
+      "version": "latest",
+      "index": true
+    },
+    "whatsmeow_repo": {
+      "type": "http",
+      "url": "https://raw.githubusercontent.com/tulir/whatsmeow/master",
+      "refresh": "daily",
+      "deepRead": true,
+      "recursive": true,
+      "index": true,
+      "track_changes": true
+    },
+    "whatsmeow
